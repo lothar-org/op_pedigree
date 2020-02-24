@@ -147,17 +147,18 @@ CREATE TABLE `s_member_info` (
 INSERT INTO `s_member_info` VALUES ('1', '', '', null);
 
 -- ----------------------------
--- Table structure for s_race
+-- Table structure for s_ethnic
 -- ----------------------------
-DROP TABLE IF EXISTS `s_race`;
-CREATE TABLE `s_race` (
+DROP TABLE IF EXISTS `s_ethnic`;
+CREATE TABLE `s_ethnic` (
   `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT '种族ID',
+  `area_id` int(11) unsigned NOT NULL DEFAULT '0' COMMENT '区域表ID; 广泛分布的区域',
   `name` varchar(30) CHARACTER SET utf8 NOT NULL DEFAULT '' COMMENT '民族名',
   `brief` varchar(255) NOT NULL DEFAULT '' COMMENT '简述',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COMMENT='大中华56民族';
 
 -- ----------------------------
--- Records of s_race
+-- Records of s_ethnic
 -- ----------------------------
-INSERT INTO `s_race` VALUES ('1', '汉族', '大汉王朝');
+INSERT INTO `s_ethnic` VALUES ('1', '汉族', '大汉王朝');
